@@ -1,173 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <script src="https://cdn.tailwindcss.com?v=3.3.3"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com?v=3.3.3"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="font-sans text-gray-800 bg-gray-50">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-md z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold text-indigo-600">Portfolio</a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="underline-animation">About</a>
-                    <a href="#work" class="underline-animation">Work</a>
-                    <a href="#contact" class="underline-animation">Contact</a>
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold text-indigo-600">Portfolio</a>
+        <div id="menu-links" class="hidden md:flex space-x-8">
+          <a href="#about" class="underline-animation">About</a>
+          <a href="#work" class="underline-animation">Work</a>
+          <a href="#contact" class="underline-animation">Contact</a>
+        </div>
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-white shadow-md md:hidden">
+      <a href="#about" class="block px-6 py-3 border-b underline-animation">About</a>
+      <a href="#work" class="block px-6 py-3 border-b underline-animation">Work</a>
+      <a href="#contact" class="block px-6 py-3 underline-animation">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="gradient-bg text-white min-h-screen flex items-center justify-center pt-16">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 responsive-text">Hi, I'm <span class="text-yellow-300">Zen Anthony Pastolero</span></h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+        Third-year Computer Science student, gamer at heart, and a professional procrastinator.
+      </p>
+      <a href="#about" class="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold inline-block transition-smooth hover:bg-gray-100 hover:shadow-lg">Learn More</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+          <div class="w-64 h-64 rounded-full overflow-hidden shadow-xl">
+            <img src="http://static.photos/people/640x360/1" alt="Profile" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="md:w-2/3 md:pl-12">
+          <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            I’m a third-year Computer Science student who somehow juggles coding with my passions for playing,
+             procrastinating, and sleeping. I don’t really have a strict “specialty” yet, but I enjoy working 
+             with Python and HTML/CSS, and I like to call myself a vibe coder. Outside of coding, 
+             I’m also a gamer at heart — which probably explains the procrastinating part.
+          </p>
+          <h3 class="text-2xl font-semibold mb-4">My Skills</h3>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Knows a bit of Python 🐍</span>
+            <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Knows some HTML/CSS 🎨</span>
+            <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Certified Vibe Coder ✨</span>
+            <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Pro Gamer (in my head) 🎮</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Section -->
+  <section id="work" class="section-padding bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">My Work</h2>
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <p class="text-gray-600">
+          I'm currently working on some exciting projects that will be showcased here soon. 
+          Check back later to see my latest work!
+        </p>
+      </div>
+      <div class="text-center py-12 bg-white rounded-lg shadow-md">
+        <h3 class="text-2xl font-semibold mb-4">Projects Coming Soon</h3>
+        <p class="text-gray-600 max-w-lg mx-auto">
+          I'm currently working on building my portfolio projects. 
+          Check back later to see my completed work!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16">Get In Touch</h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row gap-12">
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <i data-feather="mail" class="mr-4 text-indigo-600"></i>
+                <div>
+                  <h4 class="font-medium">Email</h4>
+                  <p class="text-gray-600">your.email@example.com</p>
                 </div>
-                <button class="md:hidden focus:outline-none">
-                    <i data-feather="menu"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="gradient-bg text-white min-h-screen flex items-center justify-center pt-16">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6 responsive-text">Hi, I'm <span class="text-yellow-300">Zen Anthony Pastolero</span></h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">A passionate [Your Profession] creating digital experiences</p>
-            <a href="#about" class="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold inline-block transition-smooth hover:bg-gray-100 hover:shadow-lg">Learn More</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">About Me</h2>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
-                    <div class="w-64 h-64 rounded-full overflow-hidden shadow-xl">
-                        <img src="http://static.photos/people/640x360/1" alt="Profile" class="w-full h-full object-cover">
-                    </div>
+              </div>
+              <div class="flex items-start">
+                <i data-feather="phone" class="mr-4 text-indigo-600"></i>
+                <div>
+                  <h4 class="font-medium">Phone</h4>
+                  <p class="text-gray-600">+1 (123) 456-7890</p>
                 </div>
-                <div class="md:w-2/3 md:pl-12">
-                    <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        I'm a [Your Profession] with a passion for creating beautiful, functional digital experiences. 
-                        With [X] years of experience in [Your Field], I specialize in [Your Skills]. 
-                        I believe in clean, efficient code and thoughtful design that puts the user first.
-                    </p>
-                    <h3 class="text-2xl font-semibold mb-4">My Skills</h3>
-                    <div class="flex flex-wrap gap-4 mb-8">
-                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">HTML/CSS</span>
-                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">JavaScript</span>
-                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">UI/UX Design</span>
-                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Responsive Design</span>
-                    </div>
-                    <a href="#" class="inline-flex items-center text-indigo-600 font-semibold">
-                        Download Resume
-                        <i data-feather="download" class="ml-2"></i>
-                    </a>
+              </div>
+              <div class="flex items-start">
+                <i data-feather="map-pin" class="mr-4 text-indigo-600"></i>
+                <div>
+                  <h4 class="font-medium">Location</h4>
+                  <p class="text-gray-600">Your City, Country</p>
                 </div>
+              </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Work Section -->
-    <section id="work" class="section-padding bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">My Work</h2>
-            <div class="text-center mb-12 max-w-2xl mx-auto">
-                <p class="text-gray-600">
-                    I'm currently working on some exciting projects that will be showcased here soon. 
-                    Check back later to see my latest work!
-                </p>
+            <div class="mt-8">
+              <h4 class="font-medium mb-4">Follow Me</h4>
+              <div class="flex space-x-4">
+                <a href="#" class="text-indigo-600 hover:text-indigo-800">
+                  <i data-feather="github"></i>
+                </a>
+                <a href="#" class="text-indigo-600 hover:text-indigo-800">
+                  <i data-feather="facebook"></i>
+                </a>
+                <a href="#" class="text-indigo-600 hover:text-indigo-800">
+                  <i data-feather="linkedin"></i>
+                </a>
+                <a href="#" class="text-indigo-600 hover:text-indigo-800">
+                  <i data-feather="instagram"></i>
+                </a>
+              </div>
             </div>
-            <div class="text-center py-12 bg-white rounded-lg shadow-md">
-                <h3 class="text-2xl font-semibold mb-4">Projects Coming Soon</h3>
-                <p class="text-gray-600 max-w-lg mx-auto">
-                    I'm currently working on building my portfolio projects. 
-                    Check back later to see my completed work!
-                </p>
-            </div>
+          </div>
+          <div class="md:w-1/2">
+            <form class="space-y-6">
+              <div>
+                <label for="name" class="block mb-2 font-medium">Name</label>
+                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+              </div>
+              <div>
+                <label for="email" class="block mb-2 font-medium">Email</label>
+                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+              </div>
+              <div>
+                <label for="message" class="block mb-2 font-medium">Message</label>
+                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea>
+              </div>
+              <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold transition-smooth hover:bg-indigo-700 hover:shadow-lg">Send Message</button>
+            </form>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">Get In Touch</h2>
-            <div class="max-w-4xl mx-auto">
-                <div class="flex flex-col md:flex-row gap-12">
-                    <div class="md:w-1/2">
-                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <i data-feather="mail" class="mr-4 text-indigo-600"></i>
-                                <div>
-                                    <h4 class="font-medium">Email</h4>
-                                    <p class="text-gray-600">your.email@example.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i data-feather="phone" class="mr-4 text-indigo-600"></i>
-                                <div>
-                                    <h4 class="font-medium">Phone</h4>
-                                    <p class="text-gray-600">+1 (123) 456-7890</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i data-feather="map-pin" class="mr-4 text-indigo-600"></i>
-                                <div>
-                                    <h4 class="font-medium">Location</h4>
-                                    <p class="text-gray-600">Your City, Country</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-8">
-                            <h4 class="font-medium mb-4">Follow Me</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-indigo-600 hover:text-indigo-800">
-                                    <i data-feather="github"></i>
-                                </a>
-                                <a href="#" class="text-indigo-600 hover:text-indigo-800">
-                                    <i data-feather="twitter"></i>
-                                </a>
-                                <a href="#" class="text-indigo-600 hover:text-indigo-800">
-                                    <i data-feather="linkedin"></i>
-                                </a>
-                                <a href="#" class="text-indigo-600 hover:text-indigo-800">
-                                    <i data-feather="instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2">
-                        <form class="space-y-6">
-                            <div>
-                                <label for="name" class="block mb-2 font-medium">Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
-                            </div>
-                            <div>
-                                <label for="email" class="block mb-2 font-medium">Email</label>
-                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
-                            </div>
-                            <div>
-                                <label for="message" class="block mb-2 font-medium">Message</label>
-                                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea>
-                            </div>
-                            <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold transition-smooth hover:bg-indigo-700 hover:shadow-lg">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+      <p class="mt-2 text-gray-400">Designed with 🤖 by Zen Anthony Pastolero</p>
+    </div>
+  </footer>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
-            <p class="mt-2 text-gray-400">Designed with 🤖 by Zen Anthony Pastolero</p>
-        </div>
-    </footer>
+  <script>
+    feather.replace();
 
-    <script>feather.replace();</script>
+    // Hamburger menu toggle
+    const toggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
