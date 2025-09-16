@@ -1,150 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?v=3.3.3"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
 
-    <head>
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home Page</title>
-
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-
-    <body>
-        <div class="container" id="container">
-
-            <nav>
-                <ul>
-                    <li><a href="#container">Home</a></li>
-                    <li><a href="#more">Details</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
-                </ul>    
-            </nav>   
-
-            <div class="content">
-
-                <h1>Hi, I'm Zen</h1>
-                    
-                <p>An average(?), miserable, and dreadful hooman</p>
-
-                <button class="btn"><a href="#more">Wanna know more?<br>(Don't)</a></button>
-        </div>
-
-        <div class="Scontainer" id="more">
-
-            <div class="box">
-                
-                <img src="box1.jpg">
-                <p>November 3, 2004. The day that I was born in this world, 
-                    and the day “life” will start challenging me.</p>
-            </div>
-
-            <div class="box">
-                
-                <img src="box2.jpg">
-                <p>At age 4, started to going to school(Was forced😞)</p>
-            </div>
-
-            <div class="box">
-                
-                <img src="box3.jpg">
-                <p>Highscool was when “life” really started challenging me
-                (Highscool was a distraction to my gaming)</p>
-            </div>
-        </div>
-
-        <div class="Tcontainer">
-
-            <div class="boxfor1">
-                <div class="T1container">
-                    <p>Last year of Highscool, finally got a girlfriend
-                        (The best of them all)</p>
-
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-indigo-600">Portfolio</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="underline-animation">About</a>
+                    <a href="#work" class="underline-animation">Work</a>
+                    <a href="#contact" class="underline-animation">Contact</a>
                 </div>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
             </div>
+        </div>
+    </nav>
 
-            <div class="boxfor2">
-                <div class="T2container">
-                    <p>August 6 2023, finally got accepted at WVSU, da best.</p>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white min-h-screen flex items-center justify-center pt-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 responsive-text">Hi, I'm <span class="text-yellow-300">Zen Anthony Pastolero</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">A passionate [Your Profession] creating digital experiences</p>
+            <a href="#about" class="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold inline-block transition-smooth hover:bg-gray-100 hover:shadow-lg">Learn More</a>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="w-64 h-64 rounded-full overflow-hidden shadow-xl">
+                        <img src="http://static.photos/people/640x360/1" alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I'm a [Your Profession] with a passion for creating beautiful, functional digital experiences. 
+                        With [X] years of experience in [Your Field], I specialize in [Your Skills]. 
+                        I believe in clean, efficient code and thoughtful design that puts the user first.
+                    </p>
+                    <h3 class="text-2xl font-semibold mb-4">My Skills</h3>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">HTML/CSS</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">JavaScript</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">UI/UX Design</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Responsive Design</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-indigo-600 font-semibold">
+                        Download Resume
+                        <i data-feather="download" class="ml-2"></i>
+                    </a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="Fcontainer">
-
-            <div class="box">
-                <img src="papa.jpg">
-                <h4>Rene T. Pastolero</h4>
-                <p>Ang aking stronk na father at ang aking lodi sa bohai</p>
+    <!-- Work Section -->
+    <section id="work" class="section-padding bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">My Work</h2>
+            <div class="text-center mb-12 max-w-2xl mx-auto">
+                <p class="text-gray-600">
+                    I'm currently working on some exciting projects that will be showcased here soon. 
+                    Check back later to see my latest work!
+                </p>
             </div>
-
-            <div class="box">
-                <img src="mama.jpg">
-                <h4>Irine P. Pastolero</h4>
-                <p>Ang aking ina naman na napaka ganda at laging sumusuporta sa amin</p>
+            <div class="text-center py-12 bg-white rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-4">Projects Coming Soon</h3>
+                <p class="text-gray-600 max-w-lg mx-auto">
+                    I'm currently working on building my portfolio projects. 
+                    Check back later to see my completed work!
+                </p>
             </div>
-
         </div>
+    </section>
 
-        <div class="Lcontainer">
-
-            <div class="Lbox">
-
-                <p>Hobbies</p>
-                    <ol>
-                        <li>Games</li>
-                        <li>Movies</li>
-                        <li>Travel</li>
-                        <li>Sleep</li>
-                    </ol>
-
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Get In Touch</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i data-feather="mail" class="mr-4 text-indigo-600"></i>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <p class="text-gray-600">your.email@example.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="phone" class="mr-4 text-indigo-600"></i>
+                                <div>
+                                    <h4 class="font-medium">Phone</h4>
+                                    <p class="text-gray-600">+1 (123) 456-7890</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-feather="map-pin" class="mr-4 text-indigo-600"></i>
+                                <div>
+                                    <h4 class="font-medium">Location</h4>
+                                    <p class="text-gray-600">Your City, Country</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-medium mb-4">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-indigo-600 hover:text-indigo-800">
+                                    <i data-feather="github"></i>
+                                </a>
+                                <a href="#" class="text-indigo-600 hover:text-indigo-800">
+                                    <i data-feather="twitter"></i>
+                                </a>
+                                <a href="#" class="text-indigo-600 hover:text-indigo-800">
+                                    <i data-feather="linkedin"></i>
+                                </a>
+                                <a href="#" class="text-indigo-600 hover:text-indigo-800">
+                                    <i data-feather="instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block mb-2 font-medium">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 font-medium">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="message" class="block mb-2 font-medium">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold transition-smooth hover:bg-indigo-700 hover:shadow-lg">Send Message</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-
-            <div class="Lbox">
-
-                <p>Talents</p>
-                    <ol>
-                        <li>Procrastinate</li>
-                        <li>Overthink</li>
-                        <li>Be a  burden</li>
-                        <li>Sleep</li>
-                    </ol>
-            </div>
-
-            <div class="Lbox">
-
-                <p>Favorites</p>
-                    <ol>
-                        <li>Sleep🤌</li>
-                        <li>Foods</li>
-                        <li>My girlfriend😍</li>
-                    </ol>
-            </div>
-
         </div>
-        
-        <footer class="foot" id="contacts">
+    </section>
 
-            <div class="left">
-    
-              <p>Thank you for your dividing your time and attention to me(Sana always hays).
-                Check contacts if you want to stay in touch.</p>
-            </div>
-    
-            <div class="right">
-    
-              <ul>
-    
-                <li><a href="https://web.facebook.com/watch/?ref=search&v=3621665648115221&external_log_id=d74bc396-38c0-4b68-b400-40d1d92701fa&q=josh%20hutcherson%20whistle%20meme" target="_blank">Facebook</a></li>
-                <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=video&cd=&cad=rja&uact=8&ved=2ahUKEwiynIDUtLWEAxV4ia8BHQlJCXwQtwJ6BAgIEAI&url=https%3A%2F%2Fwww.instagram.com%2Fbaristart%2Freel%2FC0H_mvdSDUb%2F&usg=AOvVaw2mgGtyEWNtAm-jLl49YJDM&opi=89978449" target="_blank">Instagram</a></li>
-                <li><a href="https://l.messenger.com/l.php?u=https%3A%2F%2Ftwitter.com%2FYassonim%2Fstatus%2F1728056152833847624&h=AT1RX033wpiAxshxKS_OB4R9Hjce3PToMkqZly-ihdqd1AdpuIZqIRDduZ34Jk6Cgt1A6oN-HNlwqp-ZWmhvm7OWuaMYj431kRV1S1VvZQleyE3g-oaOA7z55Eajm4DusAta6Q" target="_blank">X</a></li>
-                <li><a href="https://www.reddit.com/r/JoshHutcherson/comments/17zhx6o/whistle_baby/" target="_blank">Reddit</a></li>
-                <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjn4fS4trWEAxUThlYBHQrQDocQtwJ6BAgZEAI&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D79-AwFZCKpA&usg=AOvVaw3WeFW7vPMsisL9MBjl0tgw&opi=89978449" target="_blank">YouTube</a></li>
-              </ul>
-            </div>
-        </footer>    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+            <p class="mt-2 text-gray-400">Designed with 🤖 by Zen Anthony Pastolero</p>
+        </div>
+    </footer>
 
-    </body>
-
+    <script>feather.replace();</script>
+</body>
 </html>
