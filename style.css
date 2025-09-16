@@ -1,13 +1,7 @@
-/* ===========================
-   Custom Portfolio Styles
-   =========================== */
-
-/* Smooth scrolling for nav links */
 html {
   scroll-behavior: smooth;
 }
 
-/* Gradient background with animation */
 .gradient-bg {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   animation: gradient-shift 12s ease infinite;
@@ -19,12 +13,10 @@ html {
   100% { background-position: 0% 50%; }
 }
 
-/* Smooth transitions */
 .transition-smooth {
   transition: all 0.3s ease-in-out;
 }
 
-/* Card hover effect */
 .card-hover {
   transition: all 0.3s ease;
 }
@@ -33,7 +25,6 @@ html {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
-/* Custom underline animation */
 .underline-animation {
   position: relative;
 }
@@ -51,12 +42,10 @@ html {
   width: 100%;
 }
 
-/* Section padding */
 .section-padding {
   padding: 5rem 0;
 }
 
-/* Responsive typography */
 @media (max-width: 768px) {
   .responsive-text {
     font-size: 1.5rem;
@@ -66,16 +55,14 @@ html {
   }
 }
 
-/* Navigation links */
 nav a {
-  color: #4c51bf; /* Indigo-600 */
+  color: #4c51bf;
   font-weight: 500;
 }
 nav a:hover {
-  color: #2c5282; /* Darker indigo */
+  color: #2c5282;
 }
 
-/* Buttons */
 button, a.button, .btn {
   transition: all 0.3s ease;
 }
@@ -83,7 +70,6 @@ button:hover, a.button:hover, .btn:hover {
   transform: translateY(-2px);
 }
 
-/* Contact Form */
 input, textarea {
   transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -92,7 +78,6 @@ input:focus, textarea:focus {
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
 }
 
-/* Footer Glow Effect */
 footer {
   position: relative;
 }
@@ -110,4 +95,36 @@ footer::before {
 @keyframes footer-glow {
   0% { background-position: 0% 0%; }
   100% { background-position: 300% 0%; }
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: #e5e7eb; /* gray-200 */
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.5s ease, background 0.3s ease;
+}
+
+.progress-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.875rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.progress-bar:hover .progress-text {
+  opacity: 1;
 }
